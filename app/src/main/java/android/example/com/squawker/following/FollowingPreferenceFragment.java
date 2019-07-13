@@ -33,6 +33,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 public class FollowingPreferenceFragment extends PreferenceFragmentCompat implements
         SharedPreferences.OnSharedPreferenceChangeListener{
 
+    // backend sender : https://squawkerfcmserver.udacity.com/
     private final static String LOG_TAG = FollowingPreferenceFragment.class.getSimpleName();
 
     @Override
@@ -40,7 +41,7 @@ public class FollowingPreferenceFragment extends PreferenceFragmentCompat implem
         // Add visualizer preferences, defined in the XML file in res->xml->preferences_squawker
         addPreferencesFromResource(R.xml.following_squawker);
     }
-    
+
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
 
