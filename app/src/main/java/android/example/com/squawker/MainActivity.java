@@ -86,6 +86,12 @@ public class MainActivity extends AppCompatActivity implements
         // Start the loader
         getSupportLoaderManager().initLoader(LOADER_ID_MESSAGES, null, this);
 
+        Bundle extras = getIntent().getExtras();
+        // Checks if the extras exist and if the key "test" from our FCM message is in the intent
+        if (extras != null && extras.containsKey("test")) {
+            // If the key is there, print out the value of "test"
+            Log.d(LOG_TAG, "Contains: " + extras.getString("test"));
+        }
     }
 
     @Override
